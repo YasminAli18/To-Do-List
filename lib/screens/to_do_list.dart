@@ -40,7 +40,6 @@ class _TodoListScreenState extends State<TodoListScreen> {
           color: Colors.black,
           child: Center(
             child:DrawerScreen() ,
-            // child: Text("Drawer content هنا بعدين ✨", style: TextStyle(color: Colors.white)),
           ),
         ),
       ),

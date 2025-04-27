@@ -51,7 +51,6 @@ class _DrawerScreenState extends State<DrawerScreen> {
              ),
           ),
           
-          // Using Expanded for the list of items
           Expanded(
             child: ListView(
               padding: EdgeInsets.zero,
@@ -70,13 +69,13 @@ class _DrawerScreenState extends State<DrawerScreen> {
                     value: Theme.of(context).brightness == Brightness.dark,
                     onChanged: (value) {
                       setState(() {
-                        if (value) {
-                          // Switch to dark mode
-                           Brightness.dark;
-                        } else {
-                          // Switch to light mode
-                          Brightness.light;
-                        }
+                        // if (value) {
+                         
+                        //    Brightness.dark;
+                        // } else {
+                         
+                        //   Brightness.light;
+                        // }
                       });
                     },
                   ),
@@ -90,7 +89,6 @@ class _DrawerScreenState extends State<DrawerScreen> {
                   leading: Icon(Icons.exit_to_app, color: Colors.red),
                   title: Text('Log out', style: TextStyle(color: Colors.red)),
                   onTap: () {
-                    // Handle logout here
                   },
                 ),
               ],

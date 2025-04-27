@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
       backgroundColor: Colors.black,
       body: Column(
         children: [
-          // Top section with Skip button on the left
+          // Skip button
           Padding(
             padding: const EdgeInsets.all(20.0),
             child: Align(
@@ -27,14 +27,13 @@ class _HomeScreenState extends State<HomeScreen> {
                       context,
                       MaterialPageRoute(builder: (context) => WelcomeScreen()),
                     );
-                  // Navigate to the next screen (or skip onboarding)
                 },
                 child: _buildButton('Skip', Colors.black, Colors.grey),
               ),
             ),
           ),
           
-          // PageView for the 3 images
+          // PageView
           Expanded(
             child: PageView(
               controller: _pageController,
@@ -57,7 +56,7 @@ class _HomeScreenState extends State<HomeScreen> {
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                // Back Button on the left (Always visible)
+                // Back Button
                 GestureDetector(
                   onTap: () {
                     if (_currentPage > 0) {
@@ -70,7 +69,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   child: _buildButton('Back', Colors.black, Colors.grey),
                 ),
                 
-                // Next or Get Started Button on the right
+                // Next or Get Started Button
                 if (_currentPage < 2)
                   GestureDetector(
                     onTap: () {
@@ -100,7 +99,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // Method to build each page with an image, title, and description
   Widget _buildPage(String imagePath, String title, String description) {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
@@ -109,7 +107,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: Image.asset(
             imagePath, 
             fit: BoxFit.contain,
-            width: 200, // To make the image take up all available space while maintaining its aspect ratio
+            width: 200, 
           ),
         ),
         SizedBox(height: 10),
@@ -127,7 +125,6 @@ class _HomeScreenState extends State<HomeScreen> {
     );
   }
 
-  // Method to build the buttons
   Widget _buildButton(String text, Color backgroundColor, Color textColor) {
     return Container(
       padding: EdgeInsets.symmetric(vertical: 12, horizontal: 20),

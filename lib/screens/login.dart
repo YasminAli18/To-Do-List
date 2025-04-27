@@ -97,7 +97,6 @@ class _LoginScreenState extends State<LoginScreen> {
                      ElevatedButton(
                         onPressed: () {
                           if (_formKey.currentState!.validate()) {
-                            // لو الفاليديشن تمام، نروح لصفحة ToDoListScreen
                             Navigator.push(
                               context,
                               MaterialPageRoute(builder: (context) => TodoListScreen()),
@@ -117,7 +116,7 @@ class _LoginScreenState extends State<LoginScreen> {
 
                       SizedBox(height: 30),
 
-                      // OR Divider
+                    
                       Row(
                         children: [
                           Expanded(child: Divider(color: Colors.grey)),
@@ -176,7 +175,7 @@ class _LoginScreenState extends State<LoginScreen> {
                                      context,
                                      MaterialPageRoute(builder: (context) => RegisterScreen()),
                                    );
-                              // Navigate to Register screen
+                              
                             },
                             child: Text("Register", style: TextStyle(color: Colors.purple)),
                           )

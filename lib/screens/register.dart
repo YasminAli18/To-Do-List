@@ -137,15 +137,11 @@ class _RegisterScreenState extends State<RegisterScreen> {
                               context,
                               MaterialPageRoute(builder: (context) => TodoListScreen()),
                             );
-                        // Perform register action
-                        // Navigate to next screen or show success message
                       }
                     },
                     child: _buildButton('Register', Colors.purple, Colors.white),
                   ),
                   SizedBox(height: 10),
-
-                  // Or Divider
                   Row(
                     children: [
                       Expanded(child: Divider(color: Colors.grey)),
@@ -158,7 +154,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   // Register with Google Button
                   GestureDetector(
                     onTap: () {
-                      // Google register logic
                     },
                     child: _buildButtonWithIcon(Icons.golf_course, 'Register with Google'),
                   ),
@@ -167,7 +162,6 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   // Register with Apple Button
                   GestureDetector(
                     onTap: () {
-                      // Apple register logic
                     },
                     child: _buildButtonWithIcon(Icons.apple, 'Register with Apple'),
                   ),
@@ -183,7 +177,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ),
                       GestureDetector(
                         onTap: () {
-                          // Navigate to Register screen
+                         
                           Navigator.push(
                             context,
                             MaterialPageRoute(builder: (context) => LoginScreen()),
